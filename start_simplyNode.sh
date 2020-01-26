@@ -15,7 +15,9 @@ startNodeFunction(){
     NODE_IP=$2
     NODE_PORT=$3
 
-    startNodeAction="geth --port 22000 --networkid 9354 --nodiscover --allow-insecure-unlock --datadir=./pblkchain --maxpeers=0  --rpc --rpcport 8543 --rpcaddr 127.0.0.1 --rpccorsdomain "'*'" --rpcapi "'db,eth,net,web3,personal,miner,admin'" "
+    ETH_STATS=" --ethstats node:asdf@$NODE_IP:3000"
+
+    startNodeAction="geth --port 22000 --networkid 9354 --nodiscover --allow-insecure-unlock --datadir=./pblkchain --maxpeers=0  --rpc --rpcport 8543 --rpcaddr 127.0.0.1 --rpccorsdomain "'*'" --rpcapi "'db,eth,net,web3,personal,miner,admin'" $ETH_STATS"
     # echo "$startNodeAction"
 }
 
