@@ -3,7 +3,7 @@
 >Requirments -> Ubuntu and Geth installed.
 
 
-### New Geth account
+## New Geth account
 
 1 - Creació d'una compte, en cas de no tenir-ne cap, amb la que posteriorment treballarem a la xarxa. ( /network )
 
@@ -19,23 +19,34 @@ geth --datadir pblkchain account new
 }
 ```
 
-## Lift up a network with a node
+## Lift up a clean node
 
-If you do not have a Geth Account, create a new one following these steps --> ''New Geth account''
+If you do not have a Geth Account, create a new one following these steps --> ***New Geth account***
 
-''Terminal1''  --> Geth execution
-
-```
-geth --port 3000 --networkid 9354 --nodiscover --datadir=./pblkchain --maxpeers=0  --rpc --rpcport 8543 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --rpcapi "db,eth,net,web3,personal,miner,admin"
-```
-
-''Terminal2''  --> Attach
+_Terminal 1_ --> Clean database and Geth execution
 
 ```
-geth attach http://127.0.0.1:8543
+./reGenesis.sh
 ```
 
-''Terminal3''  --> Dapp execution
+```
+./start_simplyNode.sh
+```
+
+_Terminal 2_ --> Start Netstat
+
+```
+./start_ethstats.sh
+```
+
+After start the Ether Netstat, open a browser with the following URL: 
+```
+http://localhost:3000
+```
+
+Here you'll see a panel with all the parameters of the network.
+
+_Terminal 3_  --> Dapp execution
 
 Deploy Contracts and Bring Up Web App.
 Follow one of these. Check your directory.
