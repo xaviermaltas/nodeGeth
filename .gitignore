@@ -1,2 +1,4 @@
 node_modules/
 geth/
+logs/
+eth-netstats/
