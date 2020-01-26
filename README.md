@@ -23,7 +23,7 @@ geth --datadir pblkchain account new
 
 If you do not have a Geth Account, create a new one following these steps --> ***New Geth account***
 
-_Terminal 1_ --> Clean database and Geth execution
+**Terminal 1** --> Clean database and Geth execution
 
 ```
 ./reGenesis.sh
@@ -33,7 +33,7 @@ _Terminal 1_ --> Clean database and Geth execution
 ./start_simplyNode.sh
 ```
 
-_Terminal 2_ --> Start Netstat
+**Terminal 2** --> Start Netstat
 
 ```
 ./start_ethstats.sh
@@ -46,7 +46,7 @@ http://localhost:3000
 
 Here you'll see a panel with all the parameters of the network.
 
-_Terminal 3_  --> Dapp execution
+**Terminal 3**  --> Dapp execution
 
 Deploy Contracts and Bring Up Web App.
 Follow one of these. Check your directory.
